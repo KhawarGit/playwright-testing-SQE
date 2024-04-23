@@ -1,5 +1,5 @@
 // @ts-check
-const { test, expect, chromium } = require('@playwright/test');
+const { test, expect} = require('@playwright/test');
 
 test('check login - Invalid Password - gives error', async ( {page} ) => {
   await page.goto('http://localhost/web%20Applications%20with%20PHP/finalModule_Course1/login.php');
