@@ -12,7 +12,8 @@ test('check login - Invalid Password - gives error', async ( {page} ) => {
   // Now click the login button
   await page.click('button[value="LogIn"]');
   //wait for navigation
-  await page.waitForSelector('text=Log In', {timeout: 5000});
+  // await page.waitForSelector('text=Log In', {timeout: 5000});
+  await page.waitForURL('http://localhost/web%20Applications%20with%20PHP/finalModule_Course1/checkingLogin.php');
   
   await expect(page.locator('p[style="color: red;"]')).toHaveText(
     "Incorrect Password."
@@ -26,8 +27,8 @@ test('check login - without username - gives error', async ( {page} ) => {
   // Now click the login button
   await page.click('button[value="LogIn"]');
   //wait for navigation
-  await page.waitForSelector('text=Log In', {timeout: 5000});
-  
+  // await page.waitForSelector('text=Log In', {timeout: 5000});
+  await page.waitForURL('http://localhost/web%20Applications%20with%20PHP/finalModule_Course1/checkingLogin.php');
   await expect(page.locator('p[style="color: red;"]')).toHaveText(
     "User Name and Password are required."
   );
