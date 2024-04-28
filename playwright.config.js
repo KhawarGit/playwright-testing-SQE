@@ -37,6 +37,14 @@ module.exports = defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+    {
+      name: 'iphone 11 pro max landscape',
+      use: { ...devices['iPhone 11 Pro Max landscape'] },
+    },
+    {
+      name: 'iphone 11 pro max landscape',
+      use: { ...devices['iPhone 12'] },
+    },
 
     {
       name: 'firefox',
